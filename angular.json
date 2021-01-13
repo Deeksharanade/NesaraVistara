@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "EticketVistara"
+    }
+  },
+  "defaultProject": "EticketVistara",
+  "cli": {
+    "analytics": "fc51e4e7-f42d-4656-80ad-d40f2a63a08d"
+  }
 }
