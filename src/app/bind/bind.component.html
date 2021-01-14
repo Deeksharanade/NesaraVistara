@@ -24,7 +24,7 @@
         <tr  colspan="3" style="font-size: 11px; padding-top: 7px; padding-bottom: 7px; font-family: Arial, Helvetica, sans-serif; color: white; text-align: left; 
         background-color:#3943A2;">
         
-            <td  style="font-size: 11px;"> Passenger Name </td>
+            <td  style="font-size: 11px; padding-top: 4px; padding-bottom: 4px;"> Passenger Name </td>
             <td  style="font-size: 11px;">Ticket number</td>
             <td  style="font-size: 11px;">
                 Flight flyer no.
@@ -56,16 +56,16 @@
     <div style="padding-left: 5px; padding-right: 5px;" >
         <table  style=" border: 1px solid black; 
         text-align: center;  width: 100%; height: 100%;">
-            <tr  colspan="3" style="font-size: 11px; padding-top: 7px; padding-bottom: 7px; font-family: Arial, Helvetica, sans-serif; color: white; text-align: left; 
+            <tr  colspan="3" style="font-size: 11px; padding-top: 4px; padding-bottom: 4px; font-family: Arial, Helvetica, sans-serif; color: white; text-align: left; 
             background-color:#3943A2;">
-                <td  style="font-size: 11px;"> Flight </td>
+                <td  style="font-size: 11px; padding-top: 4px; padding-bottom: 4px;"> Flight </td>
                 <td  style="font-size: 11px;">Departure</td>
                 <td  style="font-size: 11px;">Arrival</td> 
                 <td  style="font-size: 11px;">Status</td>
             </tr>
           
             <tr class="travel" *ngFor="let another of invoice.anothers; let i=index">
-                <td style="  text-align: left;">&nbsp;<img src="assets/img/logo.png"  alt="" height="35px" width="45px"> 
+                <td style="  text-align: left;">&nbsp;<img src="assets/img/logo.png"  alt=""   height="35px" width="45px"> 
                    <textarea style="  border-color: white; font-size: 11px;" id="ADDITIONAL" name="ADDITIONAL" rows="10" cols="50"></textarea></td>
                 <td style="float: left;"> <br>
                     <textarea style=" padding-top: 30px; font-size: 11px;" id="ADDITIONAL" name="ADDITIONAL" rows="10" cols="30"></textarea></td>
@@ -88,22 +88,21 @@
     
     <div >
         <table  style=" border: 1px solid black; text-align: center;  width: 100%; height: 100%;">
-            <th  colspan="3" style="font-size: 11px; padding-top: 7px; padding-bottom: 7px; font-family: Arial, Helvetica, sans-serif; color: white; text-align: left; 
+            <th  colspan="3" style="font-size: 11px; padding-top: 4px; padding-bottom: 4px; font-family: Arial, Helvetica, sans-serif; color: white; text-align: left; 
             background-color:#3943A2;">  Payment Details</th>
 
             <tr class="col-4 travel"  >
-                <td style="text-align: left;"><b> This is an Electronic ticket.  Please carry a <br> positive identification for Check in.</b>  </td>
-                <td style="text-align: left; line-height: 20px;"> Fare: <br>
+                <td style="text-align: left; font-size: 15px;"><b> This is an Electronic ticket.  Please carry a <br> positive identification for Check in.</b>  </td>
+                <td style="text-align: left; float: right; line-height: 20px;"> Fare: <br>
                     K3/GST: <br>
                     Fee & Surcharge <br>
                     <b>Total Amount:</b> </td>
-                <td style="text-align: left;" >
-                    <input name="fee" style="font-size: 10px; text-align: left;height: 20px; width: 100px; " [(ngModel)]="fee1"  id="val1" type="number" >Rs <br>            
-                    <input name="fee" style="font-size: 10px; text-align: left;height: 20px;width: 100px;  " [(ngModel)]="fee2"  id="val1" type="number" >Rs <br>
-                    <input name="fee" style="font-size: 10px; text-align: left;height: 20px; width: 100px; " [(ngModel)]="fee3" #box3 (keyup.enter)="onEnter1()"  id="val1" type="number" > Rs <br>
-<span >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Rs </span>
-    <span style="float: left; font-size: 10px;"><b>{{total | number: '1.0-0'}}</b></span> <br>  </td>
+                <td style="text-align: right;" >
+                    <input name="fee" style="font-size: 10px; text-align: right;height: 20px; width: 90px; " [(ngModel)]="fee1"  id="val1" type="number" >Rs <br>            
+                    <input name="fee" style="font-size: 10px; text-align: right;height: 20px;width: 90px;  " [(ngModel)]="fee2"  id="val1" type="number" >Rs <br>
+                    <input name="fee" style="font-size: 10px; text-align: right;height: 20px; width: 90px; " [(ngModel)]="fee3" #box3 (keyup.enter)="onEnter1()"  id="val1" type="number" >Rs <br>
+
+    <span style=" font-size: 10px;"><b  style=" font-size: 13px;">{{total | number: '1.0-0'}}</b></span> &nbsp;&nbsp;&nbsp; Rs<br>   </td>
                     
                 <br>
             
@@ -118,5 +117,6 @@
     <img style="width: 100%;" src="assets/img/last.png" alt="last">
 
 </form>
+
 
 
